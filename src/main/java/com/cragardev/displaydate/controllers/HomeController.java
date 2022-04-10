@@ -36,6 +36,26 @@ public class HomeController {
 		
 	}
 	
+	@RequestMapping("/date2")
+	public String date2(Model model) {
+		
+		Date today = new Date();
+		SimpleDateFormat day2 = new SimpleDateFormat("EEEE, ' the 'd ' of 'MMMM, yyyy");
+		SimpleDateFormat timeOfDayPt1 = new SimpleDateFormat("h:mm a");
+		SimpleDateFormat timeOfDayPt2 = new SimpleDateFormat("zzzz");
+
+		String day2Format = day2.format(today);
+		String time2Format1 = timeOfDayPt1.format(today);
+		String time2Format2 = timeOfDayPt2.format(today);
+
+		model.addAttribute("date2", day2Format);
+		model.addAttribute("time21", time2Format1);
+		model.addAttribute("time22", time2Format2);
+		
+		return "date2.jsp";
+		
+	}
+	
 	@RequestMapping("/time")
 	public String time(Model model) {
 		

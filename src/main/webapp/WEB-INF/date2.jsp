@@ -17,7 +17,7 @@
 
 					<head>
 						<meta charset="UTF-8" />
-						<title>Craig Burke - Display Date - Home</title>
+						<title>Craig Burke - Display Date - Date2</title>
 						<!-- Bootstrap -->
 						<!-- CSS only -->
 						<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -36,32 +36,22 @@
 					</head>
 
 					<body>
-						<!-- == Home button == -->
-						<!-- <a class="btn btn-danger float-end mb-3" href="/">Home</a> -->
-						<!-- <p class="w-100"></p> -->
-						<div class="container w-25">
-							<!-- Beginning of Container -->
-							<h2 class="text-danger">Dashboard</h2>
+						<div class="container w-50">
+							<!-- == Home button == -->
+							<a class="btn btn-danger float-end mb-3" href="/">Home</a>
 							<p class="w-100"></p>
-							<div class="dropdown">
-								<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-									id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-									Date or Time selection
-								</a>
+							<!-- Beginning of Container -->
+							<h2 class="text-danger">Date Page</h2>
+							<p class="w-100"></p>
+							<h2 class="date">
+								<c:out value="${date2}" />
+							</h2>
+							<h2>And the time is <span class="text-warning"><c:out value="${time21}" /></span> <c:out value="${time22}" /></h2>
+							<p class="w-100"></p>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<!-- <li><a class="dropdown-item" href="/side">side</a></li> -->
-									<li><a class="dropdown-item" href="/date">Date</a></li>
-									<li><a class="dropdown-item" href="/time">Time</a></li>
-									<li><a class="dropdown-item" href="/date2">Date2</a></li>
-								</ul>
-							</div>
 						</div>
 						<!-- End of Container -->
-
-						<p class="w-100"></p>
-
-						<script src="/js/app.js"></script>
+						<script src="/js/app_date.js"></script>
 					</body>
 
 					</html>
